@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>check box</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function checkselection() {
+            var red = document.getElementById("r").checked;
+            var yellow = document.getElementById("y").checked;
+            var green = document.getElementById("g").checked;
+            if (!(red || yellow || green)) {
+                alert("please select a color");
+            }
+        }
+    </script>
+    <body>
+        <div>
+            Select Gender <br>
+            Red : <input type="checkbox" id="r" name="color"> <br>
+            Yellow : <input type="checkbox" id="y" name="color"> <br>
+            Green : <input type="checkbox" id="g" name="color"> <br>
+            <input type="button" value="submit" onclick="checkselection()">
+            <!-- Radio button's needs to be grouped under one single name -->
+        </div>
+    </body>
+</html>
