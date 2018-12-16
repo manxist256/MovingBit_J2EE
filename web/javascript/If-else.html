@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>If-else</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function clicked(button) {
+                document.write("you clicked " + button + "<br/>");
+            }
+            function checkeligibility() {
+                var age = parseInt(document.getElementById("age").value);
+                if (age > 18) {
+                    if (age <= 60) {
+                        document.write("you meet the requirements");
+                    } else {
+                        document.write("you are too old");
+                    }
+                } else {
+                    document.write("you are too young");
+                }
+            }
+            function checkandpassed() {
+                var english = parseInt(document.getElementById("e").value);
+                var maths = parseInt(document.getElementById("m").value);
+                if (english >= 40 && maths >= 40) {
+                    document.write("passed");
+                } else {
+                    document.write("fail");
+                }
+            }
+            function checkorpassed() {
+                var english = parseInt(document.getElementById("e1").value);
+                var maths = parseInt(document.getElementById("m1").value);
+                if (english >= 40 || maths >= 40) {
+                    document.write("passed");
+                } else {
+                    document.write("fail");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="button" value="button1" onclick="clicked('button1')">
+            <input type="button" value="button2" onclick="clicked('button2')">
+            <br>
+            enter age : <input type="text" id="age">
+            <input type="button" onclick="checkeligibility()" value="check eligibility">
+            <br>
+            English marks : <input type="text" id="e">
+            Maths marks : <input type="text" id="m">
+            <input type="button" value="pass/fail" onclick="checkandpassed()">
+            <br>
+            English marks : <input type="text" id="e1">
+            Maths marks : <input type="text" id="m1">
+            <input type="button" value="pass/fail" onclick="checkorpassed()">
+        </div>
+    </body>
+</html>
