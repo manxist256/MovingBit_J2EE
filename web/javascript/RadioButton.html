@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Radio Button</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function checkselection() {
+                var male = document.getElementById("m").checked;
+                var female = document.getElementById("f").checked;
+                if (!(male|| female)) {
+                    alert("please select a gender");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            Select Gender <br>
+            Male : <input type="radio" id="m" name="gender"> <br>
+            Female : <input type="radio" id="f" name="gender"> <br>
+            <input type="button" value="submit" onclick="checkselection()">
+            <!-- Radio button's needs to be grouped under one single name -->
+        </div>
+    </body>
+</html>
