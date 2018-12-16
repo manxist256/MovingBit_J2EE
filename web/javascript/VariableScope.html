@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Variable scope</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var variable = "g_variable"; 
+            function print() {
+                var variable2 = "l_variable"; 
+                //if you don't define a variable with type 'var', then it becomes global variable
+                document.write("inside function " + variable + "<br/>");
+                document.write("inside function " + variable2 + "<br/>");
+            }
+            print();
+            document.write("outside function " + variable + "<br/>");
+            document.write("outside function " + variable2 + "<br/>"); //throws error as local variable variable2 not visible outside the function where variable2 is declaraed/
+        </script>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
