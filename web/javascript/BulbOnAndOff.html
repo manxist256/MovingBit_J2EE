@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bulb on and off</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var flag = 0;
+            function toggleBulb() {
+                var img = document.getElementById("bulb");
+                if (flag === 0) {
+                    bulb.src = "../source_images/bulbon.gif";
+                    flag = 1;
+                } else {
+                    bulb.src = "../source_images/pic_bulboff.gif";
+                    flag = 0;
+                }
+            }
+            setInterval(toggleBulb, 1000);
+        </script>
+    </head>
+    <body>
+        <div>
+            <img src="../source_images/pic_bulboff.gif" id="bulb" onclick="toggleBulb()">
+        </div>
+    </body>
+</html>
