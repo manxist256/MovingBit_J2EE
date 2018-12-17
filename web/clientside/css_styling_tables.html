@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Table</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        .table {
+            border-collapse: collapse;
+        }
+        thead {
+            background-color: cyan;
+        }
+        tfoot {
+            background-color: yellow;
+        }
+        tbody {
+            border: 1px dotted red;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div>
+            <table border="2" class="table">
+                <caption> Best selling games
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            Games 2018
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>COC</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>CR</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">More games coming</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </body>
+</html>
