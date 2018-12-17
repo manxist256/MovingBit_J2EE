@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>show hide</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    </head>
+    <script>
+        var flag = 0;
+        $(document).ready(function() {
+           $("#p1").click(function() {
+              if (flag === 0) {
+                    $("#p2").hide(); 
+                    flag = 1;
+              } else {
+                    $("#p2").show(); 
+                    flag = 0;
+              }
+           });
+        });
+        
+    </script>
+    <body>
+        <div>
+            <p id="p1"> Hi </p>
+            <p id="p2"> Hello </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Fade In Out</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <style>
+            #pa1 {
+                display:none;
+            }
+        </style>
+    </head>
+    <script>
+        $(document).ready(function() {
+           $("#pa2").click(function() {
+              $("#pa1").fadeOut(); 
+           });
+        });
+    </script>
+    <body>
+        <div>
+            <p id="pa1"> This is paragraph number 1 </p>
+            <p id="pa2"> This is paragraph number 2 </p>
+        </div>
+    </body>
+</html>
