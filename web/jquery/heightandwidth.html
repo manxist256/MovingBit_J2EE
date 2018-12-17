@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>heightwidth</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    </head>
+    <script>
+        $(document).ready(function() {
+           $("#divider").click(function() {
+               alert($(this).height()); //101
+               alert($(this).innerHeight()); //141
+               alert($(this).outerHeight()); //145
+               alert($(this).width()); //100
+               alert($(this).innerWidth()); //140
+               alert($(this).outerWidth()); //144
+           });
+        });
+    </script>
+    <style>
+        #divider {
+            width:100px;
+            height:101px;
+            padding: 20px;
+            border: 2px solid green;
+        }
+    </style>
+    <body>
+        <div id="divider">
+            
+        </div>
+    </body>
+</html>
