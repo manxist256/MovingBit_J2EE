@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    </head>
+    <style>
+        .grandparent {
+            height:200px;
+            width:500px;
+            border:2px solid red;
+            margin: 10px;
+        }
+        .parent {
+            height:180px;
+            width:460px;
+            border:2px solid red;
+            margin: 10px;
+        }
+        .child {
+            height:160px;
+            width:420px;
+            border:2px solid red;
+            margin: 10px;
+        }
+        .grandchild {
+            height:140px;
+            width:380px;
+            border:2px solid red;
+            margin: 10px;
+        }
+        .grandchild2 {
+            height:140px;
+            width:380px;
+            border:2px solid red;
+            margin: 10px;
+        }
+        .grandchild3 {
+            height:140px;
+            width:380px;
+            border:2px solid red;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+           //$(".grandchild").parent().css("color", "cyan"); 
+           //$(".grandchild").parents().css("color", "cyan"); 
+           //$(".grandchild").parentsUntil(".grandparent").css("color", "cyan"); 
+           //$(".grandchild").siblings().css("color", "cyan");
+//           var x = $(".parent").children();
+//           $(".parent").children().css("color", "cyan");
+//           alert($(".parent").children().length);
+        });
+    </script>
+    <body>
+        <div class="grandparent">
+            GP
+            <div class="parent">
+                P
+                <div class="child">
+                    C
+                    <div class="grandchild">
+                        GC1
+                    </div>
+                    <div class="grandchild2">
+                        GC2
+                    </div>
+                    <div class="grandchild3">
+                        GC3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
