@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Form Validation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function isEmpty(param) {
+            return param === "" || param === null;
+        }
+        function validateform() {
+            var formcorrect = true;
+            var name = document.getElementById("name").value;
+            if (isEmpty(name)) {
+                alert("please enter name");
+                formcorrect = false;
+            }
+            var usrname = document.getElementById("usr").value;
+            if (isEmpty(usrname)) {
+                alert("please enter username");
+                formcorrect = false;
+            }
+            var pwd = document.getElementById("pwd").value;
+            if (isEmpty(pwd)) {
+                alert("please enter password");
+                formcorrect = false;
+            }
+            var email = document.getElementById("eid").value;
+            var regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            if (isEmpty(email) || !email.match(regex)) {
+                alert("please enter a valid email id");
+                formcorrect = false;
+            }
+            var m_gender = document.getElementById("gm").checked;
+            var f_gender = document.getElementById("gg").checked;
+            if (!(m_gender || f_gender)) {
+                alert("please select gender");
+                formcorrect = false;
+            }
+            return formcorrect;
+        }
+    </script>
+    <body>
+        <div>
+            <form method="post" action="login"  onsubmit="return validateform()">
+                <fieldset>
+                    <legend> Facebook account creation </legend>
+                    Name : <input type="text" maxlength="20" id="name"><br>
+                    username : <input type="text" maxlength="20" id="usr"><br>
+                    password : <input type="password" maxlength="20" id="pwd"><br>
+                    EmailId : <input type="text" maxlength="20" id="eid"><br>
+                    Gender <br>
+                    Male : <input type="radio" name="gender" id="gm"> 
+                    Female : <input type="radio" name="gender" id="gg">
+                    <br>
+                    <input type="submit" value="create account">
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
