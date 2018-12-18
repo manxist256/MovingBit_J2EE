@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Create Node</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id='outerdiv'>
+            Outer div
+            <p> 1st Inner </p>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+           var tn = document.createTextNode("Inner div"); 
+           var e = document.createElement("p");
+           var app = e.appendChild(tn);
+           document.getElementById("outerdiv").appendChild(app);
+        });
+    </script>
+</html>
