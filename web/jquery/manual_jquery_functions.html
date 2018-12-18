@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    </head>
+    <style>
+        #p1, #p3 {
+            opacity: 0;
+            
+        }
+    </style>
+    <script>
+        function show() {
+            document.getElementById("p1").style.opacity = "1";
+            document.getElementById("p1").style.display = "block";
+        }
+        function hide() {
+            document.getElementById("p2").style.opacity = "0";
+            document.getElementById("p2").style.display = "none";
+        }
+        var op1 = 0, cntr = 0;
+        function fadeIn() {
+            document.getElementById("p3").style.opacity = op1 + 0.1;
+            op1 += 0.1; cntr++;
+            if (cntr !== 10) {
+                setTimeout(fadeIn, 50);
+            }
+        }
+        var op2 = 1, cnt2 = 0;
+        function fadeOut() {
+            document.getElementById("p4").style.opacity = op2 - 0.1;
+            op2 -= 0.1; cnt2++;
+            if (cnt2 !== 10) {
+                setTimeout(fadeOut, 50);
+            }
+        }
+    </script>
+    <body>
+        <div>
+            <p id="p1">
+                P1
+            </p>
+            <p id="p2">
+                P2
+            </p>
+            <p id="p3">
+                P3
+            </p>
+            <p id="p4">
+                P4
+            </p>
+            <input id="b1" type="button" value="show p1" onclick="show()">
+            <input id="b2" type="button" value="hide p2" onclick="hide()">
+            <input id="b3" type="button" value="fadeIn p3" onclick="fadeIn()">
+            <input id="b4" type="button" value="fadeOut p4" onclick="fadeOut()">
+        </div>
+    </body>
+</html>
