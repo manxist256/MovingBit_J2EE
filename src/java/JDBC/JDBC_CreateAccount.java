@@ -16,9 +16,9 @@ import java.sql.Statement;
  */
 public class JDBC_CreateAccount {
         public void createAccount(String username, String password) throws ClassNotFoundException, SQLException {
-            String query = "insert into logindetails values ('" + username + "','" + password + "')";
+            String query = "insert into log(user, pass) values ('" + username + "','" + password + "')";
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3310/studentlogin","mankank","gmpwothah");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3310/bankaccount","kbk","ytkd0CSIK656f2ZL");
             Statement statement = con.createStatement();
             statement.executeUpdate(query);
         }

@@ -11,12 +11,37 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     </head>
+    <script>
+        
+        var xmlhttp = new XMLHttpRequest();
+        
+        function process() {
+            if (xmlhttp.readyState === 0 || xmlhttp.readyState === 4) {
+                var username = document.getElementById("usr").value;
+                xmlhttp.open("GET", "../Ajax_1?user=" + username, true);
+                xmlhttp.send(null);
+                xmlhttp.onreadystatechange = retrieveResult;
+                 
+            } else {
+                setTimeout(process, 1000);
+            }
+        }
+        
+        function retrieveResult() {
+            if (xmlhttp.readyState === 4) {
+                var response = xmlhttp.responseText;
+                document.getElementById("ex").innerHTML = response;
+                setTimeout(process, 1000);   
+            }
+        } 
+    </script>
     <body>
         <div>
-            <form method="post" action="../CreateAccount_1">
-                username : <input type="text" name="u1">
+            <form method="get" action="../CreateAccount_1">
+                username : <input type="text" name="u1" onkeypress="process()" id="usr">
                 password : <input type="password" name="p1">
                 <input type="submit" value="submit">
+                <p id="ex"></p>
             </form>
         </div>
     </body>
