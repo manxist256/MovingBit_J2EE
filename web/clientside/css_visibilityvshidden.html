@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Visibility vs Hidden</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    </head>
+    <style>
+        .fd {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            visibility: hidden; 
+        }
+        //visibility:hidden -> the element is there in DOM, it is just hidden from end user. And it's place will not be occupied by some other element.
+        // where as display:none, will remove the element from DOM tree and it's position will be occupied with the next appropriate element.
+        .sd {
+            height: 50px;
+            width: 50px;
+            background-color: yellow;
+        }
+    </style>
+    <body>
+        <div class="fd">
+            
+        </div>
+        <div class="sd">
+            
+        </div>
+    </body>
+</html>
